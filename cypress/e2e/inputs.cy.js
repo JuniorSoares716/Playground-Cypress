@@ -6,9 +6,9 @@ describe("Input Fields", () => {
   });
 
   it("Deve preencher o campo texto", () => {
-    cy.get('nav a[href="/input-fields"]').click();
-    cy.contains("h2", "Input Fields").should("be.visible");
 
+    cy.goTo('/input-fields','Input Fields');
+    
     cy.get("input#fullname").type("Junior Soares");
 
     cy.get("input#email").type("junior@gmail.com");
