@@ -3,12 +3,10 @@ describe("Input Fields", () => {
     cy.goHome();
     cy.login("papito@cyskills.com.br", "showtime");
     cy.userLoggedIn();
+    cy.goTo("/input-fields", "Input Fields");
   });
 
   it("Deve preencher o campo texto", () => {
-
-    cy.goTo('/input-fields','Input Fields');
-    
     cy.get("input#fullname").type("Junior Soares");
 
     cy.get("input#email").type("junior@gmail.com");
